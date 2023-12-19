@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/47730f9393.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <link rel="icon" type="image/png" href="img/bookmark.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body cz-shortcut-listen="true">
+    <main>
+      <div class="container">
+        <div class="text-center head py-5">
+          <h1>Bookmarker</h1>
+        </div>
+        <div class="lineDashed"></div>
+        <div class="text-center py-3 tit">
+          <h3>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h3>
+        </div>
+        <div class="mb-4">
+          <label for="siteName" class="my-1 my-sm-3"
+            ><i class="fa-solid fa-book-bookmark mx-1"></i>Site Name</label
+          >
+          <input
+            type="text"
+            id="siteName"
+            placeholder="Enter site name..."
+            required
+            class="w-100 form-control"
+          />
+          <label for="siteUrl" class="my-1"
+            ><i class="fa-solid fa-link mx-1"></i>Site URL</label
+          >
+          <input
+            type="text"
+            id="siteUrl"
+            placeholder="Enter site URL..."
+            required
+            class="w-100 form-control"
+          />
+          <div class="d-flex justify-content-center align-items-center">
+            <button onclick="addToFavorites()" class="btn btn-submit mt-3 px-5">
+              Submit
+            </button>
+          </div>
+        </div>
+        <div class="lineDashed mb-3"></div>
+        <div>
+          <table class="table table-striped w-100 mx-auto text-center">
+            <thead>
+              <th scope="col">Index</th>
+              <th scope="col">Websites</th>
+              <th scope="col">Visit</th>
+              <th scope="col">Delete</th>
+            </thead>
+            <tbody id="favTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
