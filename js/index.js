@@ -29,7 +29,7 @@ function addToFavorites(){
                     <i class="fa-solid fa-circle-arrow-right text-danger me-2"></i>Site URL must be a valid one`
                   });
 
-    }else if(validateSiteName()==true && validateSiteUrl()==true) {
+    }else if(validateSiteName(siteName.value.trim())==true && validateSiteUrl()==true) {
         var site = {
             name : siteName.value,
             url : siteUrl.value
@@ -81,9 +81,9 @@ function deleteSite(index){
     displaySites(sites)
 
 }
-function validateSiteName(){
+function validateSiteName(siteName){
     var regx = /^[a-zA-Z0-9]{3,}$/
-    if(regx.test(siteName.value) == true){
+    if(regx.test(siteName) == true){
         return true
     }else{
         return false
